@@ -1,5 +1,32 @@
-function openWhatsApp(service) {
-  const msg = `Hello, I want to enquire about: ${service}`;
-  const url = `https://wa.me/918121592299?text=${encodeURIComponent(msg)}`;
+const whatsapp = "918121592299";
+const email = "skyexpress.vskp@gmail.com";
+
+let selectedService = "";
+
+function openEnquiry(service) {
+  selectedService = service;
+  document.getElementById("serviceName").innerText = service;
+  document.getElementById("enquiryModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("enquiryModal").style.display = "none";
+}
+
+function sendWhatsApp() {
+  const msg = `Hello, I want to enquire about: ${selectedService}`;
+  const url = `https://wa.me/${whatsapp}?text=${encodeURIComponent(msg)}`;
   window.open(url, "_blank");
+  closeModal();
+}
+
+function sendEmail() {
+  const subject = `Enquiry about ${selectedService}`;
+  const body =
+    `Hello,\n\nI would like to enquire about your service: ${selectedService}.\n\nPlease contact me.\n\nThanks.`;
+
+  window.location.href =
+    `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  closeModal();
 }
