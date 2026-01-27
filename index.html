@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Vizag Express International Couriers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sky Express International Couriers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,7 +13,6 @@
   <div class="hero-content">
     <h1>Vizag Express International Couriers</h1>
     <p>Fast • Safe • Reliable Courier Services in Vizag</p>
-
     <div class="hero-buttons">
       <a href="tel:+918121592299" class="btn primary">📞 Call Now</a>
       <a href="https://wa.me/918121592299" class="btn whatsapp">💬 WhatsApp</a>
@@ -33,45 +32,47 @@
   <h2>Our Services</h2>
 
   <div class="services-grid">
+
     <div class="service-card">
       <h3>📦 Local Courier (Vizag)</h3>
       <p>Same-day and next-day delivery across Vizag.</p>
-      <button onclick="openWhatsApp('Local Courier - Vizag')">Enquire Now</button>
+      <button onclick="openEnquiry('Local Courier (Vizag)')">Enquire Now</button>
     </div>
 
     <div class="service-card">
       <h3>🇮🇳 Domestic Courier (India)</h3>
       <p>Fast and affordable shipping across India.</p>
-      <button onclick="openWhatsApp('Domestic Courier - India')">Enquire Now</button>
+      <button onclick="openEnquiry('Domestic Courier (India)')">Enquire Now</button>
     </div>
 
     <div class="service-card">
       <h3>✈️ International Courier</h3>
       <p>Ship documents & parcels worldwide.</p>
-      <button onclick="openWhatsApp('International Courier')">Enquire Now</button>
+      <button onclick="openEnquiry('International Courier')">Enquire Now</button>
     </div>
 
     <div class="service-card">
       <h3>📄 Documents & Parcels</h3>
       <p>Secure handling of important shipments.</p>
-      <button onclick="openWhatsApp('Documents & Parcels')">Enquire Now</button>
+      <button onclick="openEnquiry('Documents & Parcels')">Enquire Now</button>
     </div>
 
     <div class="service-card">
       <h3>🏪 Business Shipments</h3>
       <p>Regular pickups for offices & companies.</p>
-      <button onclick="openWhatsApp('Business Shipments')">Enquire Now</button>
+      <button onclick="openEnquiry('Business Shipments')">Enquire Now</button>
     </div>
 
     <div class="service-card">
       <h3>🛒 E-commerce Delivery</h3>
       <p>Last-mile delivery for online sellers.</p>
-      <button onclick="openWhatsApp('E-commerce Delivery')">Enquire Now</button>
+      <button onclick="openEnquiry('E-commerce Delivery')">Enquire Now</button>
     </div>
+
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- WHY -->
 <section class="section light">
   <h2>Why Choose Us?</h2>
   <ul class="why">
@@ -101,10 +102,26 @@
 </section>
 
 <footer>
-  <p>© 2026 Vizag Express International Couriers</p>
+  <p>Sky Express International Couriers</p>
 </footer>
 
+<!-- FLOATING CALL BUTTON -->
 <a href="tel:+918121592299" class="call-float">📞</a>
+
+<!-- ENQUIRY MODAL -->
+<div id="enquiryModal" class="modal-overlay" style="display:none;">
+  <div class="modal">
+    <h3>Enquire about</h3>
+    <p id="serviceName"></p>
+
+    <div class="modal-buttons">
+      <button class="btn whatsapp" onclick="sendWhatsApp()">💬 WhatsApp</button>
+      <button class="btn primary" onclick="sendEmail()">📧 Email</button>
+    </div>
+
+    <button class="modal-close" onclick="closeModal()">✖ Close</button>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
