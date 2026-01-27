@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sky Express International Couriers</title>
+  <title>Vizag Express International Couriers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <h1>Vizag Express International Couriers</h1>
@@ -20,14 +19,12 @@
   </div>
 </section>
 
-<!-- STATS -->
 <section class="stats">
   <div>🚚 10,000+ Shipments Delivered</div>
   <div>🌍 200+ International Destinations</div>
   <div>⭐ Trusted by 500+ Customers</div>
 </section>
 
-<!-- SERVICES -->
 <section class="section">
   <h2>Our Services</h2>
 
@@ -36,43 +33,54 @@
     <div class="service-card">
       <h3>📦 Local Courier (Vizag)</h3>
       <p>Same-day and next-day delivery across Vizag.</p>
-      <button onclick="openEnquiry('Local Courier (Vizag)')">Enquire Now</button>
+      <button type="button" onclick="openEnquiry('Local Courier (Vizag)')">
+        Enquire Now
+      </button>
     </div>
 
     <div class="service-card">
       <h3>🇮🇳 Domestic Courier (India)</h3>
       <p>Fast and affordable shipping across India.</p>
-      <button onclick="openEnquiry('Domestic Courier (India)')">Enquire Now</button>
+      <button type="button" onclick="openEnquiry('Domestic Courier (India)')">
+        Enquire Now
+      </button>
     </div>
 
     <div class="service-card">
       <h3>✈️ International Courier</h3>
       <p>Ship documents & parcels worldwide.</p>
-      <button onclick="openEnquiry('International Courier')">Enquire Now</button>
+      <button type="button" onclick="openEnquiry('International Courier')">
+        Enquire Now
+      </button>
     </div>
 
     <div class="service-card">
       <h3>📄 Documents & Parcels</h3>
       <p>Secure handling of important shipments.</p>
-      <button onclick="openEnquiry('Documents & Parcels')">Enquire Now</button>
+      <button type="button" onclick="openEnquiry('Documents & Parcels')">
+        Enquire Now
+      </button>
     </div>
 
     <div class="service-card">
       <h3>🏪 Business Shipments</h3>
       <p>Regular pickups for offices & companies.</p>
-      <button onclick="openEnquiry('Business Shipments')">Enquire Now</button>
+      <button type="button" onclick="openEnquiry('Business Shipments')">
+        Enquire Now
+      </button>
     </div>
 
     <div class="service-card">
       <h3>🛒 E-commerce Delivery</h3>
       <p>Last-mile delivery for online sellers.</p>
-      <button onclick="openEnquiry('E-commerce Delivery')">Enquire Now</button>
+      <button type="button" onclick="openEnquiry('E-commerce Delivery')">
+        Enquire Now
+      </button>
     </div>
 
   </div>
 </section>
 
-<!-- WHY -->
 <section class="section light">
   <h2>Why Choose Us?</h2>
   <ul class="why">
@@ -84,15 +92,17 @@
   </ul>
 </section>
 
-<!-- CONTACT -->
 <section class="section">
   <h2>Contact Us</h2>
   <p><strong>📍 Address:</strong> Old Dairy Farm, Visakhapatnam – 530040</p>
   <p><strong>📞 Phone:</strong> <a href="tel:+918121592299">8121592299</a></p>
-  <p><strong>📧 Email:</strong> <a href="mailto:skyexpress.vskp@gmail.com">skyexpress.vskp@gmail.com</a></p>
+  <p><strong>📧 Email:</strong>
+    <a href="mailto:skyexpress.vskp@gmail.com">
+      skyexpress.vskp@gmail.com
+    </a>
+  </p>
 </section>
 
-<!-- MAP -->
 <section class="section">
   <h2>Our Location</h2>
   <iframe 
@@ -102,24 +112,29 @@
 </section>
 
 <footer>
-  <p>Sky Express International Couriers</p>
+  <p>© 2026 Vizag Express International Couriers</p>
 </footer>
 
-<!-- FLOATING CALL BUTTON -->
 <a href="tel:+918121592299" class="call-float">📞</a>
 
 <!-- ENQUIRY MODAL -->
-<div id="enquiryModal" class="modal-overlay" style="display:none;">
+<div id="enquiryModal" class="modal-overlay">
   <div class="modal">
     <h3>Enquire about</h3>
     <p id="serviceName"></p>
 
     <div class="modal-buttons">
-      <button class="btn whatsapp" onclick="sendWhatsApp()">💬 WhatsApp</button>
-      <button class="btn primary" onclick="sendEmail()">📧 Email</button>
+      <button type="button" class="btn whatsapp" onclick="sendWhatsApp()">
+        💬 WhatsApp
+      </button>
+      <button type="button" class="btn primary" onclick="sendEmail()">
+        📧 Email
+      </button>
     </div>
 
-    <button class="modal-close" onclick="closeModal()">✖ Close</button>
+    <button type="button" class="modal-close" onclick="closeModal()">
+      ✖ Close
+    </button>
   </div>
 </div>
 
