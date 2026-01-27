@@ -1,3 +1,5 @@
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -19,11 +21,7 @@ body {
 .hero-content h1 { font-size: 44px; margin-bottom: 10px; }
 .hero-content p { font-size: 20px; margin-bottom: 25px; }
 
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
+.hero-buttons { display: flex; gap: 15px; justify-content: center; }
 
 .btn {
   padding: 14px 26px;
@@ -33,10 +31,17 @@ body {
   color: #fff;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .primary { background: #0b4ea2; }
 .whatsapp { background: #25d366; }
+
+.btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px rgba(11,78,162,0.4);
+  transform: translateY(-2px);
+}
 
 /* STATS */
 .stats {
@@ -54,12 +59,17 @@ body {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
 }
 
-.section h2 {
-  text-align: center;
-  margin-bottom: 30px;
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
+
+.section h2 { text-align: center; margin-bottom: 30px; }
 
 /* SERVICES */
 .services-grid {
@@ -73,6 +83,12 @@ body {
   padding: 25px;
   border-radius: 14px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.15);
 }
 
 .service-card button {
@@ -125,6 +141,22 @@ footer {
   text-decoration: none;
 }
 
+/* SCROLL TOP */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: #0b4ea2;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: none;
+  z-index: 2000;
+}
+
 /* MODAL */
 .modal-overlay {
   position: fixed;
@@ -133,7 +165,7 @@ footer {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.6);
-  display: none;            /* 👈 IMPORTANT */
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: 2000;
