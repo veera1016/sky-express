@@ -1,73 +1,8 @@
-const whatsapp = "918121592299";
-const email = "skyexpress.vskp@gmail.com";
-
-let selectedService = "";
-
-// ENQUIRY POPUP
-function openEnquiry(service) {
-  selectedService = service;
-  document.getElementById("serviceName").innerText = service;
-  document.getElementById("enquiryModal").style.display = "flex";
-}
-
-function closeModal() {
-  document.getElementById("enquiryModal").style.display = "none";
-}
-
-function sendWhatsApp() {
-  const msg = "Hello, I want to enquire about: " + selectedService;
-  const url = "https://wa.me/" + whatsapp + "?text=" + encodeURIComponent(msg);
-  window.open(url, "_blank");
-  closeModal();
-}
-
-function sendEmail() {
-  const subject = "Enquiry about " + selectedService;
-  const body =
-    "Hello,\n\nI would like to enquire about your service: " +
-    selectedService +
-    ".\n\nPlease contact me.\n\nThanks.";
-
-  const mailto =
-    "mailto:" +
-    email +
-    "?subject=" +
-    encodeURIComponent(subject) +
-    "&body=" +
-    encodeURIComponent(body);
-
-  window.location.href = mailto;
-  closeModal();
-}
-
-// FADE IN SECTIONS
-const sections = document.querySelectorAll(".section");
-
-function revealOnScroll() {
-  const triggerBottom = window.innerHeight * 0.85;
-
-  sections.forEach(section => {
-    const boxTop = section.getBoundingClientRect().top;
-    if (boxTop < triggerBottom) {
-      section.classList.add("show");
-    }
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
-
-// SCROLL TO TOP
-const scrollBtn = document.getElementById("scrollTopBtn");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
-  }
-});
-
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
 });
