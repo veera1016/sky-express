@@ -1,163 +1,343 @@
-* {
+html { scroll-behavior: smooth; }
+
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f7fb;
+  color: #333;
 }
 
-/* Hero Section */
+/* ================= HERO SECTION ================= */
 .hero {
   position: relative;
-  height: 95vh;
-  background-image: url("assets/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
+  height: 88vh;
+  background: url("https://images.unsplash.com/photo-1605902711622-cfb43c4437b1?auto=format&fit=crop&w=1600&q=80")
+    center / cover no-repeat;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  color: #fff;
 }
 
-.hero .overlay {
+.overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: linear-gradient(
+    135deg,
+    rgba(3, 18, 40, 0.85),
+    rgba(11, 78, 162, 0.85)
+  );
+  z-index: 1;
 }
 
+/* ================= NAVBAR ================= */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 32px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  margin-left: 22px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-call {
+  background: #e53935;
+  padding: 10px 18px;
+  border-radius: 22px;
+  white-space: nowrap;
+}
+
+/* ================= HERO CONTENT ================= */
 .hero-content {
   position: relative;
-  text-align: center;
-  color: #fff;
   z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
   padding: 20px;
+  transform: translateY(-30px);
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 15px;
-  letter-spacing: 2px;
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 22px;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
 }
 
-.hero-content p {
-  font-size: 1.4rem;
-  margin-bottom: 25px;
+.hero-sub {
+  font-size: 22px;
+  margin-bottom: 46px;
+  opacity: 0.95;
+  line-height: 1.5;
 }
 
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* ================= BUTTONS ================= */
 .btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background: #ff9800;
-  color: #000;
+  padding: 14px 28px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 6px;
-  transition: background 0.3s ease;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.primary { background: #0b4ea2; }
+.whatsapp { background: #25d366; }
 
 .btn:hover {
-  background: #e68900;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* Bottom Info Bar */
-.info-bar {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #0d47a1;
+/* ================= STATS ================= */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  background: #082f66;
   color: #fff;
   text-align: center;
-  padding: 12px 20px;
-  z-index: 3;
-  font-size: 0.95rem;
+  padding: 20px;
+  font-weight: bold;
 }
 
-.info-bar p {
-  margin: 0;
-  line-height: 1.4;
+/* ================= SECTIONS ================= */
+.section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-/* Services Section */
-.services {
-  padding: 60px 10%;
+.section h2 {
   text-align: center;
-  background: #f5f5f5;
-}
-
-.services h2 {
-  font-size: 2.5rem;
   margin-bottom: 30px;
 }
 
-.service-list {
+/* ================= SERVICES ================= */
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 25px;
 }
 
 .service-card {
-  padding: 25px;
   background: #fff;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
 }
 
-/* About Section */
-.about {
-  padding: 60px 10%;
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card button {
+  margin-top: 15px;
+  background: #0b4ea2;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* ================= WHY CHOOSE US ================= */
+.why-section {
+  width: 100%;
+  background: linear-gradient(135deg,#0b4ea2,#0f76d2);
+  color: #fff;
+  padding: 70px 20px;
   text-align: center;
 }
 
-.about h2 {
-  font-size: 2.3rem;
-  margin-bottom: 20px;
+.why {
+  list-style: none;
+  max-width: 600px;
+  margin: 30px auto 0;
+  padding: 0;
+  font-size: 18px;
 }
 
-.about p {
-  font-size: 1.2rem;
+.why li {
+  margin: 10px 0;
+}
+
+/* ================= CONTACT – PREMIUM ================= */
+.contact-section {
+  text-align: center;
+  background: linear-gradient(135deg, #f2f7ff, #ffffff);
+  padding: 60px 20px;
+  border-radius: 24px;
+}
+
+.contact-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.contact-item {
+  background: #ffffff;
+  padding: 28px 24px;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
   line-height: 1.6;
-  color: #444;
+  color: #333;
 }
 
-/* Contact Section */
-.contact {
-  padding: 50px 10%;
-  background: #222;
+/* subtle top border */
+.contact-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #0b4ea2, #25d366);
+}
+
+/* hover lift */
+.contact-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* TITLE inside card */
+.contact-item strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #082f66;
+  letter-spacing: 0.3px;
+}
+
+/* LINKS */
+.contact-item a {
+  color: #0b4ea2;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* ❌ REMOVED watermark icons (fixes double icon bug) */
+
+
+/* ================= FOOTER ================= */
+footer {
+  background: #082f66;
   color: #fff;
   text-align: center;
+  padding: 20px;
 }
 
-.contact h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-}
-
-.contact p {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-  background: #111;
-  color: #aaa;
+/* ================= FLOATING CALL ================= */
+.call-float {
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  background: #e53935;
+  color: #fff;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
   text-align: center;
-  padding: 15px 10px;
-  font-size: 0.9rem;
+  line-height: 58px;
+  font-size: 24px;
+  z-index: 1500;
 }
 
-/* Responsive */
+/* ================= SCROLL TOP ================= */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 95px;
+  right: 24px;
+  background: #0b4ea2;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: none;
+  z-index: 1500;
+}
+
+/* ================= MODAL ================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
+  .hero-content h1 { font-size: 36px; }
+  .hero-sub { font-size: 18px; }
+  .navbar { padding: 16px 20px; }
+  .nav-links a { margin-left: 12px; font-size: 14px; }
+  .hero-buttons { gap: 16px; }
 
-  .hero-content p {
-    font-size: 1.1rem;
-  }
-
-  .info-bar {
-    font-size: 0.85rem;
-    padding: 10px;
+  .contact-section {
+    padding: 40px 16px;
   }
 }
