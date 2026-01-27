@@ -10,22 +10,22 @@ body {
 /* ================= HERO SECTION ================= */
 .hero {
   position: relative;
-  height: 88vh;
-  background: url("https://images.unsplash.com/photo-1605902711622-cfb43c4437b1?auto=format&fit=crop&w=1600&q=80")
-    center / cover no-repeat;
+  height: 90vh;   /* slightly taller for visual impact */
+  background: url("assets/hero-bg.jpg") center / cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #fff;
 }
 
+/* DARK OVERLAY – tuned for courier image */
 .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    135deg,
-    rgba(3, 18, 40, 0.85),
-    rgba(11, 78, 162, 0.85)
+    120deg,
+    rgba(5, 25, 55, 0.78),
+    rgba(8, 60, 120, 0.72)
   );
   z-index: 1;
 }
@@ -78,6 +78,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   transform: translateY(-30px);
+  backdrop-filter: blur(2px);
 }
 
 .hero-content h1 {
@@ -212,7 +213,6 @@ body {
   margin: 0 auto;
 }
 
-/* CARD */
 .contact-item {
   background: #ffffff;
   padding: 28px 24px;
@@ -226,7 +226,6 @@ body {
   color: #333;
 }
 
-/* subtle top border */
 .contact-item::before {
   content: "";
   position: absolute;
@@ -237,13 +236,11 @@ body {
   background: linear-gradient(90deg, #0b4ea2, #25d366);
 }
 
-/* hover lift */
 .contact-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
-/* TITLE inside card */
 .contact-item strong {
   display: block;
   font-size: 18px;
@@ -252,7 +249,6 @@ body {
   letter-spacing: 0.3px;
 }
 
-/* LINKS */
 .contact-item a {
   color: #0b4ea2;
   text-decoration: none;
@@ -263,9 +259,6 @@ body {
 .contact-item a:hover {
   text-decoration: underline;
 }
-
-/* ❌ REMOVED watermark icons (fixes double icon bug) */
-
 
 /* ================= FOOTER ================= */
 footer {
