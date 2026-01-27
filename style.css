@@ -19,7 +19,6 @@ body {
   color: #fff;
 }
 
-/* DARK OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
@@ -35,14 +34,14 @@ body {
 .navbar {
   position: absolute;
   top: 0;
-  left: 0;                 /* 👈 ensures no overflow */
+  left: 0;
   width: 100%;
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  padding: 22px 32px;      /* 👈 safe padding for scrollbar */
+  padding: 22px 32px;
   align-items: center;
-  box-sizing: border-box;  /* 👈 critical: prevents cutoff */
+  box-sizing: border-box;
 }
 
 .logo {
@@ -67,7 +66,7 @@ body {
   background: #e53935;
   padding: 10px 18px;
   border-radius: 22px;
-  white-space: nowrap;     /* 👈 prevents squeeze & clipping */
+  white-space: nowrap;
 }
 
 /* ================= HERO CONTENT ================= */
@@ -96,7 +95,6 @@ body {
   line-height: 1.5;
 }
 
-/* HERO BUTTONS */
 .hero-buttons {
   display: flex;
   justify-content: center;
@@ -198,29 +196,88 @@ body {
   margin: 10px 0;
 }
 
-/* ================= CONTACT ================= */
+/* ================= CONTACT – PREMIUM ================= */
 .contact-section {
   text-align: center;
+  background: linear-gradient(135deg, #f2f7ff, #ffffff);
+  padding: 60px 20px;
+  border-radius: 24px;
 }
 
 .contact-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
+/* CARD */
 .contact-item {
-  background:#fff;
-  padding:20px;
-  border-radius:12px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  background: #ffffff;
+  padding: 28px 24px;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
 }
 
-.contact-item a {
-  color:#0b4ea2;
-  text-decoration:none;
-  font-weight:bold;
+/* subtle top border */
+.contact-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #0b4ea2, #25d366);
 }
+
+/* hover lift */
+.contact-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* TITLE inside card */
+.contact-item strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #082f66;
+  letter-spacing: 0.3px;
+}
+
+/* LINKS */
+.contact-item a {
+  color: #0b4ea2;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* ICON watermark */
+.contact-item::after {
+  content: "📞";
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  font-size: 26px;
+  opacity: 0.12;
+}
+
+/* Custom icon per card */
+.contact-item:nth-child(1)::after { content: "📍"; }
+.contact-item:nth-child(2)::after { content: "📞"; }
+.contact-item:nth-child(3)::after { content: "✉️"; }
 
 /* ================= FOOTER ================= */
 footer {
@@ -291,4 +348,8 @@ footer {
   .navbar { padding: 16px 20px; }
   .nav-links a { margin-left: 12px; font-size: 14px; }
   .hero-buttons { gap: 16px; }
+
+  .contact-section {
+    padding: 40px 16px;
+  }
 }
