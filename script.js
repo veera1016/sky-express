@@ -3,7 +3,6 @@ const email = "skyexpress.vskp@gmail.com";
 
 let selectedService = "";
 
-// ENQUIRY POPUP
 function openEnquiry(service) {
   selectedService = service;
   document.getElementById("serviceName").innerText = service;
@@ -40,24 +39,7 @@ function sendEmail() {
   closeModal();
 }
 
-// FADE IN SECTIONS
-const sections = document.querySelectorAll(".section");
-
-function revealOnScroll() {
-  const triggerBottom = window.innerHeight * 0.85;
-
-  sections.forEach(section => {
-    const boxTop = section.getBoundingClientRect().top;
-    if (boxTop < triggerBottom) {
-      section.classList.add("show");
-    }
-  });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
-
-// SCROLL TO TOP
+/* SCROLL TOP */
 const scrollBtn = document.getElementById("scrollTopBtn");
 
 window.addEventListener("scroll", () => {
