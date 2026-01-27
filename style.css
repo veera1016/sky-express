@@ -5,6 +5,7 @@ body {
   color: #333;
 }
 
+/* HERO */
 .hero {
   background: linear-gradient(135deg, #0b4ea2, #0f76d2);
   height: 70vh;
@@ -15,15 +16,8 @@ body {
   color: #fff;
 }
 
-.hero-content h1 {
-  font-size: 44px;
-  margin-bottom: 10px;
-}
-
-.hero-content p {
-  font-size: 20px;
-  margin-bottom: 25px;
-}
+.hero-content h1 { font-size: 44px; margin-bottom: 10px; }
+.hero-content p { font-size: 20px; margin-bottom: 25px; }
 
 .hero-buttons {
   display: flex;
@@ -37,11 +31,14 @@ body {
   text-decoration: none;
   font-weight: bold;
   color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 .primary { background: #0b4ea2; }
 .whatsapp { background: #25d366; }
 
+/* STATS */
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
@@ -52,6 +49,7 @@ body {
   font-weight: bold;
 }
 
+/* SECTIONS */
 .section {
   max-width: 1200px;
   margin: 40px auto;
@@ -63,6 +61,7 @@ body {
   margin-bottom: 30px;
 }
 
+/* SERVICES */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
@@ -76,8 +75,6 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-.service-card h3 { margin-top: 0; }
-
 .service-card button {
   margin-top: 12px;
   background: #0b4ea2;
@@ -88,8 +85,9 @@ body {
   cursor: pointer;
 }
 
+/* WHY */
 .light {
-  background: #0b4ea2;
+  background: linear-gradient(135deg, #0b4ea2, #0f76d2);
   color: #fff;
   padding: 40px 20px;
 }
@@ -103,6 +101,7 @@ body {
 
 .why li { margin: 10px 0; }
 
+/* FOOTER */
 footer {
   background: #082f66;
   color: #fff;
@@ -110,6 +109,7 @@ footer {
   padding: 20px;
 }
 
+/* FLOATING CALL */
 .call-float {
   position: fixed;
   bottom: 20px;
@@ -123,4 +123,42 @@ footer {
   line-height: 60px;
   font-size: 26px;
   text-decoration: none;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
 }
