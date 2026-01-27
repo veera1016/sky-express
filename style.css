@@ -264,20 +264,8 @@ body {
   text-decoration: underline;
 }
 
-/* ICON watermark */
-.contact-item::after {
-  content: "📞";
-  position: absolute;
-  right: 18px;
-  top: 18px;
-  font-size: 26px;
-  opacity: 0.12;
-}
+/* ❌ REMOVED watermark icons (fixes double icon bug) */
 
-/* Custom icon per card */
-.contact-item:nth-child(1)::after { content: "📍"; }
-.contact-item:nth-child(2)::after { content: "📞"; }
-.contact-item:nth-child(3)::after { content: "✉️"; }
 
 /* ================= FOOTER ================= */
 footer {
