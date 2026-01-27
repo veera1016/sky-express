@@ -37,27 +37,35 @@ body {
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  padding: 22px 32px;
+  padding: 18px 20px;
   align-items: center;
   box-sizing: border-box;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .nav-links a {
   color: #fff;
-  margin-left: 22px;
   text-decoration: none;
   font-weight: 500;
+  font-size: 15px;
 }
 
 .nav-call {
   background: #e53935;
-  padding: 10px 18px;
-  border-radius: 22px;
+  padding: 8px 14px;
+  border-radius: 18px;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 /* HERO CONTENT */
@@ -114,10 +122,6 @@ body {
   padding: 0 20px;
 }
 
-.section h2 {
-  text-align: center;
-}
-
 /* SERVICES */
 .services-grid {
   display: grid;
@@ -132,28 +136,12 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.service-card button {
-  margin-top: 15px;
-  background: #0b4ea2;
-  color: #fff;
-  border: none;
-  padding: 12px 22px;
-  border-radius: 25px;
-}
-
 /* WHY */
 .why-section {
   background: linear-gradient(135deg,#0b4ea2,#0f76d2);
   color: #fff;
   padding: 70px 20px;
   text-align: center;
-}
-
-.why {
-  list-style: none;
-  max-width: 600px;
-  margin: auto;
-  padding: 0;
 }
 
 /* CONTACT */
@@ -192,36 +180,68 @@ footer {
 /* FLOATING CALL */
 .call-float {
   position: fixed;
-  bottom: 28px;
-  right: 24px;
+  bottom: 22px;
+  right: 18px;
   background: #e53935;
   color: #fff;
-  width: 58px;
-  height: 58px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   text-align: center;
-  line-height: 58px;
-  font-size: 24px;
+  line-height: 54px;
+  font-size: 22px;
 }
 
-/* MOBILE */
+/* MOBILE FIXES */
 @media (max-width: 480px) {
 
-  .hero { height: auto; padding: 80px 0 60px; }
+  .hero { height: auto; padding: 90px 0 60px; }
 
-  .hero-content h1 { font-size: 30px; }
+  .hero-content h1 { font-size: 30px; line-height: 1.2; }
   .hero-sub { font-size: 16px; }
 
-  .hero-buttons { flex-direction: column; }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 14px;
+  }
 
-  .btn { width: 100%; max-width: 260px; margin: auto; }
+  .btn {
+    width: 100%;
+    max-width: 260px;
+    margin: auto;
+  }
 
-  .stats { grid-template-columns: 1fr; }
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    font-size: 14px;
+  }
 
-  .services-grid { grid-template-columns: 1fr; }
+  .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
-  .contact-box { grid-template-columns: 1fr; }
+  .logo {
+    font-size: 18px;
+  }
 
-  .navbar { padding: 14px 16px; }
+  .nav-links {
+    width: 100%;
+    justify-content: flex-end;
+  }
 
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .nav-call {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+
+  .services-grid,
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
 }
