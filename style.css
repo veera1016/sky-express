@@ -10,22 +10,25 @@ body {
 /* ================= HERO SECTION ================= */
 .hero {
   position: relative;
-  height: 90vh;   /* slightly taller for visual impact */
-  background: url("assets/hero-bg.jpg") center / cover no-repeat;
+  height: 92vh;
+  background-image: url("./assets/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #fff;
 }
 
-/* DARK OVERLAY – tuned for courier image */
+/* DARK OVERLAY – tuned so image is visible */
 .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     120deg,
-    rgba(5, 25, 55, 0.78),
-    rgba(8, 60, 120, 0.72)
+    rgba(5, 25, 55, 0.55),
+    rgba(8, 60, 120, 0.45)
   );
   z-index: 1;
 }
