@@ -27,7 +27,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;   /* ✔ already correct */
+  align-items: center;
   padding: 20px 30px;
   position: relative;
   z-index: 2;
@@ -47,17 +47,17 @@ body {
 /* NAV LINKS */
 .nav-links {
   display: flex;
-  align-items: center;     /* 🔑 FIX */
+  align-items: center;
   gap: 20px;
 }
 
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  padding: 8px 16px;       /* 🔑 SAME padding for all */
-  line-height: 1;          /* 🔑 FIX baseline issue */
-  display: inline-flex;    /* 🔑 FIX */
-  align-items: center;     /* 🔑 FIX */
+  padding: 8px 16px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* CALL BUTTON */
@@ -76,13 +76,33 @@ body {
   z-index: 2;
 }
 
-.hero-content h1 {
-  font-size: 52px;
+/* 🔥 VISITING CARD STYLE BRANDING */
+.company-name {
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin: 0;
+  color: #0b4ea2; /* 🔴 CHANGE THIS COLOR IF NEEDED */
+}
+
+.hero-logo {
+  height: 90px;
+  margin: 16px auto 12px;
+  display: block;
+}
+
+.company-tagline {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #000;
 }
 
 .hero-sub {
   font-size: 20px;
   margin: 20px 0 32px;
+  color: #fff;
 }
 
 .hero-buttons {
@@ -99,6 +119,7 @@ body {
   border: none;
   cursor: pointer;
   transition: all .3s ease;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -204,8 +225,16 @@ footer {
     justify-content: space-between;
   }
 
-  .hero-content h1 {
-    font-size: 30px;
+  .company-name {
+    font-size: 36px;
+  }
+
+  .hero-logo {
+    height: 65px;
+  }
+
+  .company-tagline {
+    font-size: 18px;
   }
 
   .hero-buttons {
