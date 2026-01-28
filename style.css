@@ -9,7 +9,9 @@ body {
   overflow-x: hidden;
 }
 
+/* ===================== */
 /* HERO */
+/* ===================== */
 .hero {
   min-height: 100vh;
   background: url("assets/hero-bg.jpg") center/cover no-repeat;
@@ -17,39 +19,21 @@ body {
   color: #fff;
 }
 
+/* 🔴 OVERLAY REMOVED FOR CLEAR VISIBILITY */
 .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
+  display: none;
 }
 
 /* ===================== */
-/* NAVBAR (DO NOT TOUCH) */
+/* NAVBAR */
 /* ===================== */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* 🔥 RIGHT MENU ONLY */
   align-items: center;
   padding: 20px 30px;
   position: relative;
   z-index: 2;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.logo img {
-  height: 34px;
-}
-
-.logo span {
-  font-size: 18px;
-  font-weight: bold;
 }
 
 /* NAV LINKS */
@@ -77,41 +61,50 @@ body {
 }
 
 /* ===================== */
-/* HERO CENTER CONTENT   */
+/* HERO CENTER CONTENT */
 /* ===================== */
 .hero-content {
   text-align: center;
-  padding: 140px 20px 40px;
+  padding-top: 260px;     /* 🔥 MORE SPACE FROM TOP */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 80px;
   position: relative;
   z-index: 2;
 }
 
-/* ONLY FOR HERO – NOT NAVBAR */
+/* COMPANY NAME */
 .company-name {
   font-size: 56px;
   font-weight: 900;
   letter-spacing: 3px;
   margin: 0;
-  color: #0b4ea2; /* change brand color here */
+  color: #0b4ea2; /* brand color */
+  text-shadow: 0 4px 12px rgba(0,0,0,0.25); /* 🔥 clarity */
 }
 
+/* LOGO BELOW NAME */
 .hero-logo {
   height: 90px;
   margin: 16px auto 12px;
   display: block;
 }
 
+/* TAGLINE */
 .company-tagline {
   font-size: 28px;
   font-weight: 800;
   letter-spacing: 2px;
   margin: 0;
-  color: #fff;
+  color: #000; /* clearer on image */
 }
 
+/* SUB TEXT */
 .hero-sub {
   font-size: 20px;
   margin: 20px 0 32px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 /* HERO BUTTONS */
@@ -121,7 +114,9 @@ body {
   gap: 20px;
 }
 
+/* ===================== */
 /* BUTTONS */
+/* ===================== */
 .btn {
   padding: 14px 26px;
   border-radius: 30px;
@@ -145,7 +140,9 @@ body {
   background: #25d366;
 }
 
+/* ===================== */
 /* SECTIONS */
+/* ===================== */
 .section {
   max-width: 1200px;
   margin: 60px auto;
@@ -168,16 +165,16 @@ footer {
   padding: 20px;
 }
 
+/* ===================== */
 /* MOBILE */
+/* ===================== */
 @media (max-width: 768px) {
   .navbar {
-    flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center; /* clean mobile look */
   }
 
-  .nav-links {
-    width: 100%;
-    justify-content: space-between;
+  .hero-content {
+    padding-top: 180px; /* mobile spacing */
   }
 
   .company-name {
