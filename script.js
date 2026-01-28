@@ -1,31 +1,18 @@
-const whatsapp = "918121592299";
-const email = "skyexpress.vskp@gmail.com";
-let selectedService = "";
-
 function openEnquiry(service) {
-  selectedService = service;
-  document.getElementById("serviceName").innerText =
+  document.getElementById("serviceTitle").innerText =
     "Enquire about " + service;
+
+  document.getElementById("waLink").href =
+    "https://wa.me/918121592299?text=" +
+    encodeURIComponent("Hello, I want to enquire about " + service);
+
+  document.getElementById("mailLink").href =
+    "mailto:skyexpress.vskp@gmail.com?subject=" +
+    encodeURIComponent("Enquiry about " + service);
+
   document.getElementById("enquiryModal").style.display = "flex";
 }
 
 function closeModal() {
   document.getElementById("enquiryModal").style.display = "none";
-}
-
-function sendWhatsApp() {
-  const msg = encodeURIComponent(
-    "Hello, I want to enquire about " + selectedService
-  );
-  window.open("https://wa.me/" + whatsapp + "?text=" + msg, "_blank");
-  closeModal();
-}
-
-function sendEmail() {
-  const subject = encodeURIComponent(
-    "Enquiry about " + selectedService
-  );
-  window.location.href =
-    "mailto:" + email + "?subject=" + subject;
-  closeModal();
 }
