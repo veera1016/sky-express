@@ -39,30 +39,30 @@
     <div class="service-card">
       <h3>Local Courier</h3>
       <p>Same-day delivery within Vizag.</p>
-      <button>Enquire Now</button>
+      <button onclick="openEnquiry('Local Courier')">Enquire Now</button>
     </div>
 
     <div class="service-card">
       <h3>Domestic Courier</h3>
       <p>Fast shipping across India.</p>
-      <button>Enquire Now</button>
+      <button onclick="openEnquiry('Domestic Courier')">Enquire Now</button>
     </div>
 
     <div class="service-card">
       <h3>International Courier</h3>
       <p>Worldwide document & parcel delivery.</p>
-      <button>Enquire Now</button>
+      <button onclick="openEnquiry('International Courier')">Enquire Now</button>
     </div>
 
     <div class="service-card">
       <h3>Business Shipments</h3>
       <p>Reliable logistics for companies.</p>
-      <button>Enquire Now</button>
+      <button onclick="openEnquiry('Business Shipments')">Enquire Now</button>
     </div>
   </div>
 </section>
 
-<!-- WHY CHOOSE US -->
+<!-- WHY -->
 <section class="why-section">
   <h2>Why Choose Us?</h2>
   <div class="why-grid">
@@ -116,5 +116,17 @@
   © Sky Express International Couriers
 </footer>
 
+<!-- ENQUIRY MODAL -->
+<div id="enquiryModal" class="modal-overlay">
+  <div class="modal">
+    <span class="close" onclick="closeModal()">×</span>
+    <h3 id="serviceTitle"></h3>
+
+    <a class="btn whatsapp" id="waLink" target="_blank">WhatsApp</a>
+    <a class="btn primary" id="mailLink">Email</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
