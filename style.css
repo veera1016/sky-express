@@ -1,4 +1,6 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -25,7 +27,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center;   /* ✔ already correct */
   padding: 20px 30px;
   position: relative;
   z-index: 2;
@@ -38,23 +40,32 @@ body {
   font-weight: bold;
 }
 
-.logo img { height: 34px; }
+.logo img {
+  height: 34px;
+}
 
+/* NAV LINKS */
 .nav-links {
   display: flex;
-  align-items: center;
+  align-items: center;     /* 🔑 FIX */
   gap: 20px;
 }
 
 .nav-links a {
   color: #fff;
   text-decoration: none;
+  padding: 8px 16px;       /* 🔑 SAME padding for all */
+  line-height: 1;          /* 🔑 FIX baseline issue */
+  display: inline-flex;    /* 🔑 FIX */
+  align-items: center;     /* 🔑 FIX */
 }
 
+/* CALL BUTTON */
 .nav-call {
   background: #e53935;
-  padding: 8px 16px;
   border-radius: 20px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 /* HERO CONTENT */
@@ -65,9 +76,14 @@ body {
   z-index: 2;
 }
 
-.hero-content h1 { font-size: 52px; }
+.hero-content h1 {
+  font-size: 52px;
+}
 
-.hero-sub { font-size: 20px; margin: 20px 0 32px; }
+.hero-sub {
+  font-size: 20px;
+  margin: 20px 0 32px;
+}
 
 .hero-buttons {
   display: flex;
@@ -90,8 +106,13 @@ body {
   box-shadow: 0 12px 25px rgba(0,0,0,0.25);
 }
 
-.primary { background: #0b4ea2; }
-.whatsapp { background: #25d366; }
+.primary {
+  background: #0b4ea2;
+}
+
+.whatsapp {
+  background: #25d366;
+}
 
 /* SECTIONS */
 .section {
@@ -103,7 +124,7 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
 }
 
@@ -130,7 +151,7 @@ body {
 /* CONTACT */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
@@ -183,7 +204,9 @@ footer {
     justify-content: space-between;
   }
 
-  .hero-content h1 { font-size: 30px; }
+  .hero-content h1 {
+    font-size: 30px;
+  }
 
   .hero-buttons {
     flex-direction: column;
