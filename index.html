@@ -4,13 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sky Express International Couriers</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="hero">
-  <div class="overlay"></div>
-
   <nav class="navbar">
     <div class="nav-links">
       <a href="#services">Services</a>
@@ -21,75 +19,96 @@
 
   <div class="hero-content">
     <h1>SKY EXPRESS</h1>
-    <img src="assets/logo.png" alt="Sky Express Logo" />
+    <img src="assets/logo.png" alt="Sky Express">
     <h2>INTERNATIONAL COURIERS</h2>
     <p>Fast • Safe • Reliable Courier Services in Vizag</p>
 
     <div class="hero-buttons">
-      <a href="tel:+918121592299" class="btn primary">📞 Call Now</a>
-      <a href="https://wa.me/918121592299" class="btn whatsapp">💬 WhatsApp</a>
+      <a href="tel:+918121592299" class="btn primary">Call Now</a>
+      <a href="https://wa.me/918121592299" class="btn whatsapp">WhatsApp</a>
     </div>
   </div>
 </header>
 
+<!-- SERVICES -->
 <section id="services" class="section">
-  <h2>Our Services</h2>
+  <h2 class="section-title">Our Services</h2>
 
   <div class="services-grid">
     <div class="service-card">
-      <h3>Local Courier</h3>
-      <p>Same-day delivery within Vizag.</p>
-      <button onclick="openEnquiry('Local Courier')">Enquire Now</button>
+      <h3>Local Courier (Vizag)</h3>
+      <p>Same-day and next-day delivery across Vizag.</p>
+      <button>Enquire Now</button>
     </div>
 
     <div class="service-card">
-      <h3>Domestic Courier</h3>
-      <p>Fast shipping across India.</p>
-      <button onclick="openEnquiry('Domestic Courier')">Enquire Now</button>
+      <h3>Domestic Courier (India)</h3>
+      <p>Fast and affordable shipping across India.</p>
+      <button>Enquire Now</button>
     </div>
 
     <div class="service-card">
       <h3>International Courier</h3>
-      <p>Worldwide document & parcel delivery.</p>
-      <button onclick="openEnquiry('International Courier')">Enquire Now</button>
+      <p>Worldwide documents & parcel delivery.</p>
+      <button>Enquire Now</button>
     </div>
 
     <div class="service-card">
       <h3>Business Shipments</h3>
-      <p>Reliable logistics for companies.</p>
-      <button onclick="openEnquiry('Business Shipments')">Enquire Now</button>
+      <p>Reliable logistics solutions for businesses.</p>
+      <button>Enquire Now</button>
+    </div>
+
+    <div class="service-card">
+      <h3>E-commerce Delivery</h3>
+      <p>Last-mile delivery for online sellers.</p>
+      <button>Enquire Now</button>
     </div>
   </div>
 </section>
 
-<section id="contact" class="section">
+<!-- WHY -->
+<section class="why-section">
+  <h2>Why Choose Us?</h2>
+
+  <div class="why-grid">
+    <div>✔ Fast Doorstep Pickup</div>
+    <div>✔ Affordable Pricing</div>
+    <div>✔ International Partner Network</div>
+    <div>✔ Secure Packaging</div>
+    <div>✔ Friendly Local Support</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
   <h2>Contact Us</h2>
 
-  <p>
-    4-105, Opposite Kavya Hospital, Sundar Nagar,<br>
-    Old Dairy Farm, Visakhapatnam – 530040
-  </p>
+  <div class="contact-cards">
+    <div class="contact-card">
+      <h4>Address</h4>
+      <p>
+        4-105, Opposite Kavya Hospital,<br>
+        Sundar Nagar, Old Dairy Farm,<br>
+        Visakhapatnam – 530040
+      </p>
+    </div>
 
-  <p>
-    📞 <a href="tel:+918121592299">+91 81215 92299</a><br>
-    📧 <a href="mailto:skyexpress.vskp@gmail.com">skyexpress.vskp@gmail.com</a>
-  </p>
+    <div class="contact-card">
+      <h4>Phone</h4>
+      <p><a href="tel:+918121592299">+91 81215 92299</a></p>
+    </div>
+
+    <div class="contact-card">
+      <h4>Email</h4>
+      <p><a href="mailto:skyexpress.vskp@gmail.com">skyexpress.vskp@gmail.com</a></p>
+    </div>
+  </div>
 </section>
 
 <footer>
-  <p>© Sky Express International Couriers</p>
+  © Sky Express International Couriers
 </footer>
 
-<!-- MODAL -->
-<div id="enquiryModal" class="modal-overlay">
-  <div class="modal">
-    <h3 id="serviceName"></h3>
-    <button class="btn whatsapp" onclick="sendWhatsApp()">WhatsApp</button>
-    <button class="btn primary" onclick="sendEmail()">Email</button>
-    <button class="close" onclick="closeModal()">Close</button>
-  </div>
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
