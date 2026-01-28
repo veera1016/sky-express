@@ -23,7 +23,9 @@ body {
   background: rgba(0,0,0,0.6);
 }
 
-/* NAVBAR */
+/* ===================== */
+/* NAVBAR (DO NOT TOUCH) */
+/* ===================== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -38,10 +40,16 @@ body {
   align-items: center;
   gap: 10px;
   font-weight: bold;
+  color: #fff;
 }
 
 .logo img {
   height: 34px;
+}
+
+.logo span {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /* NAV LINKS */
@@ -68,7 +76,9 @@ body {
   white-space: nowrap;
 }
 
-/* HERO CONTENT */
+/* ===================== */
+/* HERO CENTER CONTENT   */
+/* ===================== */
 .hero-content {
   text-align: center;
   padding: 140px 20px 40px;
@@ -76,13 +86,13 @@ body {
   z-index: 2;
 }
 
-/* 🔥 VISITING CARD STYLE BRANDING */
+/* ONLY FOR HERO – NOT NAVBAR */
 .company-name {
   font-size: 56px;
   font-weight: 900;
   letter-spacing: 3px;
   margin: 0;
-  color: #0b4ea2; /* 🔴 CHANGE THIS COLOR IF NEEDED */
+  color: #0b4ea2; /* change brand color here */
 }
 
 .hero-logo {
@@ -96,15 +106,15 @@ body {
   font-weight: 800;
   letter-spacing: 2px;
   margin: 0;
-  color: #000;
+  color: #fff;
 }
 
 .hero-sub {
   font-size: 20px;
   margin: 20px 0 32px;
-  color: #fff;
 }
 
+/* HERO BUTTONS */
 .hero-buttons {
   display: flex;
   justify-content: center;
@@ -143,37 +153,11 @@ body {
   text-align: center;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-.service-card {
-  background: #fff;
-  padding: 24px;
-  border-radius: 14px;
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
-}
-
 /* WHY */
 .why-section {
   background: #0b5fb3;
   color: #fff;
   padding: 60px 20px;
-  text-align: center;
-}
-
-/* CONTACT */
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
 }
 
 /* FOOTER */
@@ -182,35 +166,6 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px;
-}
-
-/* MODAL */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-}
-
-/* ANIMATIONS */
-.animate {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all .7s ease;
-}
-
-.animate.show {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* MOBILE */
