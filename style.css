@@ -1,6 +1,4 @@
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -12,7 +10,7 @@ body {
 /* HERO */
 .hero {
   position: relative;
-  height: 92vh;
+  min-height: 92vh;
   background: url("./assets/hero-bg.jpg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
@@ -47,23 +45,19 @@ body {
 /* BRAND */
 .brand {
   display: flex;
-  flex-direction: column;     /* LOGO TOP, TEXT BELOW */
+  flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
 }
 
 .logo-img {
-  height: 56px;               /* BIG LOGO */
-  width: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.45));
+  height: 56px;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.5));
 }
 
 .logo-text {
   font-size: 20px;
   font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.6px;
+  margin-top: 4px;
 }
 
 /* NAV LINKS */
@@ -74,7 +68,7 @@ body {
 }
 
 .nav-links a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   font-size: 15px;
 }
@@ -115,9 +109,9 @@ body {
 .btn {
   padding: 14px 28px;
   border-radius: 30px;
-  color: #fff;
   text-decoration: none;
   font-weight: bold;
+  color: #fff;
 }
 
 .primary { background: #0b4ea2; }
@@ -129,14 +123,34 @@ body {
   color: #fff;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  padding: 20px;
   text-align: center;
+  padding: 20px;
+}
+
+/* SERVICES */
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 /* CONTACT */
 .contact-section {
-  padding: 60px 20px;
   background: #fff;
+  padding: 60px 20px 140px;
   text-align: center;
 }
 
@@ -165,14 +179,14 @@ body {
 footer {
   background: #061f44;
   color: #fff;
-  padding: 18px;
   text-align: center;
+  padding: 18px;
 }
 
 /* FLOATING CALL */
 .call-float {
   position: fixed;
-  bottom: 22px;
+  bottom: 90px;
   right: 18px;
   background: #e53935;
   color: #fff;
@@ -182,22 +196,34 @@ footer {
   text-align: center;
   line-height: 54px;
   font-size: 22px;
+  z-index: 999;
 }
 
-/* MOBILE */
+/* MOBILE FIX */
 @media (max-width: 480px) {
 
-  .logo-img {
-    height: 42px;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
-  .logo-text {
-    font-size: 16px;
+  .brand {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
   }
 
-  .hero-content h1 {
-    font-size: 30px;
+  .logo-img { height: 36px; }
+  .logo-text { font-size: 18px; }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
   }
+
+  .hero-content h1 { font-size: 30px; }
+  .hero-sub { font-size: 16px; }
 
   .hero-buttons {
     flex-direction: column;
@@ -211,10 +237,6 @@ footer {
 
   .stats {
     grid-template-columns: 1fr;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    font-size: 14px;
   }
 }
