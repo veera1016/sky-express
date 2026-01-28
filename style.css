@@ -1,17 +1,16 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   background: #f4f7fb;
-  overflow-x: hidden;
+  color: #333;
 }
 
-/* ===================== */
 /* HERO */
-/* ===================== */
 .hero {
   min-height: 100vh;
   background: url("assets/hero-bg.jpg") center/cover no-repeat;
@@ -19,117 +18,57 @@ body {
   color: #fff;
 }
 
-/* 🔴 OVERLAY REMOVED FOR CLEAR VISIBILITY */
 .overlay {
-  display: none;
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
 }
 
-/* ===================== */
 /* NAVBAR */
-/* ===================== */
 .navbar {
-  display: flex;
-  justify-content: flex-end; /* 🔥 RIGHT MENU ONLY */
-  align-items: center;
-  padding: 20px 30px;
   position: relative;
   z-index: 2;
-}
-
-/* NAV LINKS */
-.nav-links {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  justify-content: flex-end;
+  padding: 20px 30px;
 }
 
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  padding: 8px 16px;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
+  margin-left: 20px;
 }
 
-/* CALL BUTTON */
 .nav-call {
   background: #e53935;
+  padding: 8px 16px;
   border-radius: 20px;
-  font-weight: 600;
-  white-space: nowrap;
 }
 
-/* ===================== */
-/* HERO CENTER CONTENT */
-/* ===================== */
+/* HERO CONTENT */
 .hero-content {
-  text-align: center;
-  padding-top: 260px;     /* 🔥 MORE SPACE FROM TOP */
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 80px;
   position: relative;
   z-index: 2;
+  text-align: center;
+  padding-top: 220px;
 }
 
-/* COMPANY NAME */
-.company-name {
-  font-size: 56px;
-  font-weight: 900;
-  letter-spacing: 3px;
-  margin: 0;
-  color: #0b4ea2; /* brand color */
-  text-shadow: 0 4px 12px rgba(0,0,0,0.25); /* 🔥 clarity */
-}
-
-/* LOGO BELOW NAME */
-.hero-logo {
+.hero-content img {
   height: 90px;
-  margin: 16px auto 12px;
-  display: block;
+  margin: 15px 0;
 }
 
-/* TAGLINE */
-.company-tagline {
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin: 0;
-  color: #000; /* clearer on image */
-}
-
-/* SUB TEXT */
-.hero-sub {
-  font-size: 20px;
-  margin: 20px 0 32px;
-  color: #fff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-/* HERO BUTTONS */
 .hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  margin-top: 30px;
 }
 
-/* ===================== */
-/* BUTTONS */
-/* ===================== */
 .btn {
-  padding: 14px 26px;
-  border-radius: 30px;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: all .3s ease;
+  padding: 12px 24px;
+  border-radius: 25px;
   text-decoration: none;
-}
-
-.btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  color: #fff;
+  margin: 8px;
+  display: inline-block;
 }
 
 .primary {
@@ -140,21 +79,36 @@ body {
   background: #25d366;
 }
 
-/* ===================== */
 /* SECTIONS */
-/* ===================== */
 .section {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 60px auto;
   padding: 0 20px;
   text-align: center;
 }
 
-/* WHY */
-.why-section {
-  background: #0b5fb3;
+/* SERVICES */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.service-card button {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #0b4ea2;
   color: #fff;
-  padding: 60px 20px;
+  cursor: pointer;
 }
 
 /* FOOTER */
@@ -165,32 +119,22 @@ footer {
   padding: 20px;
 }
 
-/* ===================== */
-/* MOBILE */
-/* ===================== */
-@media (max-width: 768px) {
-  .navbar {
-    justify-content: center; /* clean mobile look */
-  }
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
 
-  .hero-content {
-    padding-top: 180px; /* mobile spacing */
-  }
+.modal {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+}
 
-  .company-name {
-    font-size: 36px;
-  }
-
-  .hero-logo {
-    height: 65px;
-  }
-
-  .company-tagline {
-    font-size: 18px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 14px;
-  }
+.close {
+  margin-top: 10px;
 }
