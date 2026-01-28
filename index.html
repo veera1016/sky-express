@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sky Express International Couriers</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
+<header class="hero">
   <div class="overlay"></div>
 
-  <!-- NAVBAR -->
-  <div class="navbar">
-    <div class="brand">
+  <nav class="navbar">
+    <!-- LOGO UPDATED (IMAGE + TEXT, SAME CLASS NAME PRESERVED) -->
+    <div class="logo">
       <img src="assets/logo.png" alt="Sky Express Logo" class="logo-img">
       <span class="logo-text">Sky Express</span>
     </div>
@@ -24,11 +23,11 @@
       <a href="#contact">Contact</a>
       <a href="tel:+918121592299" class="nav-call">Call Now</a>
     </div>
-  </div>
+  </nav>
 
-  <!-- HERO CONTENT -->
   <div class="hero-content">
     <h1>Sky Express International Couriers</h1>
+
     <p class="hero-sub">
       Fast • Safe • Reliable Courier Services in Vizag
     </p>
@@ -38,69 +37,124 @@
       <a href="https://wa.me/918121592299" class="btn whatsapp">💬 WhatsApp</a>
     </div>
   </div>
-</section>
+</header>
 
-<!-- STATS -->
-<div class="stats">
+<section class="stats">
   <div>🚚 10,000+ Shipments Delivered</div>
   <div>🌍 200+ International Destinations</div>
   <div>⭐ Trusted by 500+ Customers</div>
-</div>
+</section>
 
-<!-- SERVICES -->
-<section class="section" id="services">
+<section id="services" class="section">
   <h2>Our Services</h2>
+
   <div class="services-grid">
-    <div class="service-card">📦 Local Courier (Vizag)</div>
-    <div class="service-card">🇮🇳 Domestic Courier (India)</div>
-    <div class="service-card">✈️ International Courier</div>
-    <div class="service-card">📄 Documents & Parcels</div>
-    <div class="service-card">🏢 Business Shipments</div>
-    <div class="service-card">🛒 E-commerce Delivery</div>
+
+    <div class="service-card">
+      <h3>📦 Local Courier (Vizag)</h3>
+      <p>Same-day and next-day delivery across Vizag.</p>
+      <button onclick="openEnquiry('Local Courier (Vizag)')">Enquire Now</button>
+    </div>
+
+    <div class="service-card">
+      <h3>🇮🇳 Domestic Courier (India)</h3>
+      <p>Fast and affordable shipping across India.</p>
+      <button onclick="openEnquiry('Domestic Courier (India)')">Enquire Now</button>
+    </div>
+
+    <div class="service-card">
+      <h3>✈️ International Courier</h3>
+      <p>Ship documents & parcels worldwide.</p>
+      <button onclick="openEnquiry('International Courier')">Enquire Now</button>
+    </div>
+
+    <div class="service-card">
+      <h3>📄 Documents & Parcels</h3>
+      <p>Secure handling of important shipments.</p>
+      <button onclick="openEnquiry('Documents & Parcels')">Enquire Now</button>
+    </div>
+
+    <div class="service-card">
+      <h3>🏪 Business Shipments</h3>
+      <p>Regular pickups for offices & companies.</p>
+      <button onclick="openEnquiry('Business Shipments')">Enquire Now</button>
+    </div>
+
+    <div class="service-card">
+      <h3>🛒 E-commerce Delivery</h3>
+      <p>Last-mile delivery for online sellers.</p>
+      <button onclick="openEnquiry('E-commerce Delivery')">Enquire Now</button>
+    </div>
+
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
+<section class="why-section">
+  <h2>Why Choose Us?</h2>
+  <ul class="why">
+    <li>✔ Fast Doorstep Pickup</li>
+    <li>✔ Affordable Pricing</li>
+    <li>✔ International Partner Network</li>
+    <li>✔ Secure Packaging</li>
+    <li>✔ Friendly Local Support</li>
+  </ul>
+</section>
+
+<section id="contact" class="section contact-section">
   <h2>Contact Us</h2>
 
   <div class="contact-box">
     <div class="contact-item">
-      <strong>📍 Address</strong><br>
-      4-105, Sundar Nagar, Adarsh Nagar,<br>
-      Visakhapatnam, Andhra Pradesh – 530040
+      📍 <strong>Address</strong><br>
+      4-105, Opposite Kavya Hospital, Sundar Nagar,<br>
+      Old Dairy Farm, Visakhapatnam – 530040
     </div>
 
     <div class="contact-item">
-      <strong>📞 Phone</strong><br>
+      📞 <strong>Phone</strong><br>
       <a href="tel:+918121592299">+91 81215 92299</a>
     </div>
 
     <div class="contact-item">
-      <strong>✉️ Email</strong><br>
+      📧 <strong>Email</strong><br>
       <a href="mailto:skyexpress.vskp@gmail.com">
         skyexpress.vskp@gmail.com
       </a>
     </div>
   </div>
+</section>
 
-  <!-- MAP (EXACT LOCATION) -->
+<section class="section">
+  <h2>Our Location</h2>
+
+  <!-- GOOGLE MAP UPDATED (EXACT COORDINATES) -->
   <iframe
     src="https://www.google.com/maps?q=17.765688,83.328408&z=18&output=embed"
-    width="100%"
-    height="320"
-    style="border:0;border-radius:16px;margin-top:30px;"
-    loading="lazy">
+    width="100%" height="300" style="border:0;" loading="lazy">
   </iframe>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  © 2026 Vizag Sky Express International Couriers. All rights reserved.
+  <p>Sky Express International Couriers</p>
 </footer>
 
-<!-- FLOATING CALL -->
 <a href="tel:+918121592299" class="call-float">📞</a>
+<button id="scrollTopBtn">⬆</button>
 
+<div id="enquiryModal" class="modal-overlay">
+  <div class="modal">
+    <h3>Enquire about</h3>
+    <p id="serviceName"></p>
+
+    <div class="modal-buttons">
+      <button class="btn whatsapp" onclick="sendWhatsApp()">💬 WhatsApp</button>
+      <button class="btn primary" onclick="sendEmail()">📧 Email</button>
+    </div>
+
+    <button class="modal-close" onclick="closeModal()">✖ Close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
